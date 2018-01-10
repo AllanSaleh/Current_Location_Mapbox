@@ -63,7 +63,9 @@ public class MainActivity extends AppCompatActivity implements LocationEngineLis
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                setCameraPosition(originLocation);
+                if (originLocation != null) {
+                    setCameraPosition(originLocation);
+                }
             }
         });
     }
